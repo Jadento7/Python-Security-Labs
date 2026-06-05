@@ -55,7 +55,7 @@ def on_release(key):
 
 # ========== ETHICAL DISCLAIMER + USER CONFIRMATION ==========
 print("\n" + "="*60)
-print("⚠️  EDUCATIONAL USE ONLY – KEYSTROKE CAPTURE DEMO  ⚠️")
+print("EDUCATIONAL USE ONLY – KEYSTROKE CAPTURE DEMO")
 print("="*60)
 print("This tool will log EVERY KEY you press into a local file.")
 print("It is intended ONLY for your own personal computer.")
