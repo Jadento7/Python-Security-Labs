@@ -80,5 +80,18 @@ When the user types `hi my name is jaden` and then presses ENTER, the log file c
 00:29:57: 'e'
 00:29:57: 'n'
 00:30:00: [SPACE]
+
+## What I Learned
+
+Through this project, I learned how to:
+
+- Capture global keyboard events using pynput
+- Handle both regular characters and special keys
+- Format output for readability (e.g., [SPACE] instead of Key.space)
+- Prevent crashes from unexpected key types using try/except
+- Write to a file with timestamps and UTF‑8 encoding
+- Implement a clean, intentional kill switch (ESC) for safety
+- Add interactive user consent to enforce ethical use
+Furthermore, this lab reinforced my understanding of why ethical disclaimers, consent prompts, and strict local‑only use are critical when working with sensitive capabilities like keylogging.
 ...
 00:30:06: [ENTER]
