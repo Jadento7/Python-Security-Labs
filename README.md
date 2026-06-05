@@ -95,7 +95,7 @@ This lab improves the vulnerable API by requiring an API key in the request head
 
 This project demonstrates how even a basic access control check can prevent unauthenticated users from accessing protected API data.
 
-## 04 - Educational Keylogger Lab
+### 04 - Educational Keylogger Lab
 This lab uses Python and the pynput library to create a safe, educational keylogger. The script captures every key press, adds a timestamp, converts special keys (space, enter, backspace, etc.) into readable tags like [SPACE], and logs everything to a local file (keylog.txt). Before any logging begins, the user must type "I AGREE" to confirm they understand the ethical restrictions. The logger stops immediately when the ESC key is pressed.
 
 This project demonstrates keyboard event handling, file I/O, and how to implement ethical safeguards (consent prompt, kill switch, local storage only) when building sensitive tools for educational purposes.
@@ -130,9 +130,6 @@ or:
 python src/secure_api_key.py
 ```
 
-```bash
-python src/secure_api_key.py
-```
 For the keylogger lab, install pynput:
 
 ```bash
