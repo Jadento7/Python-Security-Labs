@@ -97,7 +97,7 @@ This screenshot shows the Flask development server running locally on `127.0.0.1
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/python-security-labs.git
+git clone https://github.com/jadento7/python-security-labs.git
 ```
 
 2. Navigate to the project folder:
