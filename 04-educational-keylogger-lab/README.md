@@ -94,4 +94,5 @@ Through this project, I learned how to:
 - Write to a file with timestamps and UTF‑8 encoding
 - Implement a clean, intentional kill switch (ESC) for safety
 - Add interactive user consent to enforce ethical use
+
 Furthermore, this lab reinforced my understanding of why ethical disclaimers, consent prompts, and strict local‑only use are critical when working with sensitive capabilities like keylogging.
