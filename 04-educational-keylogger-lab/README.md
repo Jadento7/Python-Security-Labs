@@ -15,7 +15,8 @@ The objective of this lab was to create a safe, educational keylogger that:
 - Converts special keys (`space`, `enter`, `backspace`, etc.) into human‑readable tags
 - Writes keystrokes to a log file
 - Stops cleanly when the **ESC** key is pressed
-- Includes a clear ethical disclaimer
+- Requires explicit user consent before logging begins
+- Includes clear ethical disclaimers
 
 ## Tools Used
 
@@ -32,23 +33,25 @@ Special keys are converted to readable tags like `[SPACE]` or `[ENTER]` so the l
 
 The listener stops when the ESC key is released, thanks to the `on_release` function returning `False`.
 
+Before any logging starts, the script displays a prominent warning and requires the user to type `"I AGREE"` to confirm they understand and accept the ethical restrictions.
+
 ## Screenshots
 
 ### Keylogger Source Code
 
-![Keylogger source code](01-keylogger-code.png)
+![Keylogger source code](screenshots/01-keylogger-code.png)
 
-*The Python script showing the import statements, `format_key()` function, and the listener setup with ethical disclaimer.*
+*The Python script showing import statements, the `format_key()` function, the consent prompt, and the listener setup with ethical disclaimers.*
 
 ### Running the Keylogger
 
-![Running the keylogger](02-terminal-output.png)
+![Running the keylogger](screenshots/02-terminal-output.png)
 
-*Terminal output after starting the script. The disclaimer is shown, and the script waits for ESC to stop.*
+*Terminal output after starting the script. The disclaimer, consent prompt, and confirmation message are visible.*
 
 ### Sample Log File Output
 
-![Sample keylog output](03-keylog-output.png)
+![Sample keylog output](screenshots/03-keylog-output.png)
 
 *A portion of `keylog.txt` showing timestamped keystrokes, spaces as `[SPACE]`, and the ENTER key as `[ENTER]` followed by a newline.*
 
@@ -64,5 +67,18 @@ When the user types `hi my name is jaden` and then presses ENTER, the log file c
 00:29:55: 'y'
 00:29:56: [SPACE]
 00:29:56: 'n'
+00:29:56: 'a'
+00:29:56: 'm'
+00:29:56: 'e'
+00:29:56: [SPACE]
+00:29:57: 'i'
+00:29:57: 's'
+00:29:57: [SPACE]
+00:29:57: 'j'
+00:29:57: 'a'
+00:29:57: 'd'
+00:29:57: 'e'
+00:29:57: 'n'
+00:30:00: [SPACE]
 ...
 00:30:06: [ENTER]
