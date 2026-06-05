@@ -172,6 +172,3 @@ I also practiced documenting projects in a way that explains the goal, tools use
 ## Security and Ethics Notice
 These projects are for educational purposes only. They are designed to run in a local lab environment using 127.0.0.1, also known as localhost.
 Do not scan, test, or attack systems that you do not own or do not have explicit permission to assess. Do not deploy intentionally vulnerable applications publicly. All sensitive-looking data used in these labs is fake and should never be replaced with real credentials, personal information, API keys, tokens, or secrets.
-
-
-Do not scan, test, or attack systems that you do not own or do not have explicit permission to assess. Do not deploy intentionally vulnerable applications publicly. All sensitive-looking data used in these labs is fake and should never be replaced with real credentials, personal information, API keys, tokens, or secrets.
