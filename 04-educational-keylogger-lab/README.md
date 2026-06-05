@@ -80,8 +80,9 @@ When the user types `hi my name is jaden` and then presses ENTER, the log file c
 00:29:57: 'e'
 00:29:57: 'n'
 00:30:00: [SPACE]
+```
 
-## What I Learned
+What I Learned
 
 Through this project, I learned how to:
 
