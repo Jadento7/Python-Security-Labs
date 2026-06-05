@@ -190,7 +190,3 @@ By using or cloning this repository, you agree to use these labs responsibly and
 
 License
 Educational / portfolio use only. No warranty.
-
----
-
-Copy everything from the first line (`# Python Security Labs`) to the last line (`No warranty.`). Then paste it into your GitHub repository’s main `README.md` editor and commit.
