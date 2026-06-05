@@ -81,7 +81,7 @@ No real personal information or real credentials were used in this project.
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/python-security-labs.git
+git clone https://github.com/jadento7/python-security-labs.git
 ```
 
 2. Navigate to the project folder:
