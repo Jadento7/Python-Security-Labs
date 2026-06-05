@@ -2,191 +2,150 @@
 
 ## Overview
 
-This repository contains a collection of beginner‑friendly Python security labs created for my ePortfolio. Each lab demonstrates a different security concept in a controlled, local‑only environment.
+This repository contains beginner-friendly cybersecurity labs built with Python. Each project focuses on a specific security concept, such as port scanning, vulnerable API behavior, sensitive data exposure, and basic API access control.
 
-The labs progress from basic network scanning to API security and finally to an educational keylogger with strong ethical safeguards. All code is intentionally simplified for learning and runs exclusively on `localhost` (`127.0.0.1`).
+The purpose of this repository is to practice Python programming while building hands-on cybersecurity projects in a safe, controlled localhost environment.
 
-## Lab Index
+## Projects Included
 
-| # | Lab Name | Focus Area |
-|---|----------|-------------|
-| 01 | [Port Scanner](#01---port-scanner) | Network scanning, socket programming |
-| 02 | [Vulnerable API](#02---vulnerable-api) | Sensitive data exposure, broken access control |
-| 03 | [API Key Protected API](#03---api-key-protected-api) | Authentication, API security |
-| 04 | [Educational Keylogger](#04---educational-keylogger) | Keyboard event handling, ethical safeguards |
+| # | Project | Description | Key Concepts |
+|---:|---|---|---|
+| 01 | Python Port Scanner | A basic TCP port scanner that checks common ports on localhost and reports whether they are open or closed. | Sockets, TCP connections, ports, services, localhost scanning |
+| 02 | Vulnerable API Lab | A Flask API that intentionally exposes fake sensitive data without authentication. | Sensitive data exposure, broken access control, JSON APIs |
+| 03 | API Key Protected API Lab | An improved Flask API that requires an API key before returning protected fake data. | API keys, request headers, access control, 401 responses |
 
----
+## Skills Practiced
 
-## 01 - Port Scanner
+Through these labs, I practiced:
 
-### Overview
-A simple TCP port scanner that checks common ports on `127.0.0.1` and reports whether each port is open or closed.
+- Writing Python scripts
+- Using the Python `socket` module
+- Building basic Flask APIs
+- Returning JSON responses
+- Reading HTTP request headers
+- Testing APIs with PowerShell and `curl.exe`
+- Understanding common network ports and services
+- Identifying insecure API behavior
+- Applying basic access control concepts
+- Documenting security projects clearly and professionally
 
-### Key Features
-- Scans a predefined list of common ports (20, 21, 22, 23, 25, 53, 80, 110, 443, 445, 3389)
-- Identifies the service associated with each port
-- Uses Python's `socket` module for TCP connections
-- Runs only on localhost to prevent unauthorised scanning
+## Repository Structure
 
-### How to Run
-```bash
-```
-cd 01-port-scanner
-python src/port_scanner.py
-Learn More
-See the full README for screenshots, example output, and detailed explanations.
-
-02 - Vulnerable API
-Overview
-A deliberately insecure Flask API that exposes fake sensitive data on the /data endpoint without any authentication.
-
-Key Features
-Two routes: / (info) and /data (vulnerable endpoint)
-
-Returns fake credentials (username, password, address, SSN)
-
-Demonstrates sensitive data exposure and broken access control
-
-Runs on http://127.0.0.1:3000
-
-How to Run
-bash
-cd 02-vulnerable-api
-pip install -r requirements.txt
-python src/vulnerable_api.py
-Learn More
-See the full README for screenshots, vulnerability analysis, and improvement suggestions.
-
-03 - API Key Protected API
-Overview
-An improved version of the vulnerable API that adds API key authentication to protect the /data endpoint.
-
-Key Features
-Requires a valid X-API-Key header (lab-api-key-123)
-
-Returns 401 Unauthorized for missing or invalid keys
-
-Same fake data structure as Lab 02
-
-Demonstrates basic access control
-
-How to Run
-bash
-cd 03-api-key-protected-api
-pip install -r requirements.txt
-python src/secure_api_key.py
-Testing
-Without key: curl http://127.0.0.1:3000/data
-
-With key: curl.exe -H "X-API-Key: lab-api-key-123" http://127.0.0.1:3000/data
-
-Learn More
-See the full README for PowerShell testing examples and limitations discussion.
-
-04 - Educational Keylogger
-Overview
-A safe, educational keylogger that logs keystrokes to a local file with timestamps and human‑readable special key tags. Requires explicit user consent (I AGREE) before logging.
-
-Key Features
-Captures all key presses using the pynput library
-
-Converts special keys (space, enter, backspace, etc.) to readable tags like [SPACE]
-
-Adds timestamps (HH:MM:SS) to every keystroke
-
-Stops when ESC is pressed
-
-Includes a mandatory consent prompt and prominent ethical disclaimers
-
-No network transmission – logs saved only to keylog.txt
-
-How to Run
-bash
-cd 04-educational-keylogger-lab
-pip install pynput
-python keylogger_lab.py
-Important Ethics Notice
-This tool is for educational use only on your own computer.
-Unauthorised keylogging is illegal. The script will not run unless you type "I AGREE".
-
-Learn More
-See the full README for screenshots, example log output, and detailed safety features.
-
-Tools Used Across All Labs
-Python 3
-
-Flask
-
-pynput
-
-Visual Studio Code
-
-Localhost (127.0.0.1)
-
-PowerShell / curl.exe (for testing APIs)
-
-Repository Structure
-text
-Python-Security-Labs/
-├── README.md                     (this file)
+```text
+python-security-labs/
 ├── 01-port-scanner/
 │   ├── README.md
 │   ├── src/
 │   │   └── port_scanner.py
 │   └── screenshots/
+│       ├── 01-port-scanner-output.png
+│       └── 02-port-scanner-code.png
+│
 ├── 02-vulnerable-api/
 │   ├── README.md
 │   ├── requirements.txt
 │   ├── src/
 │   │   └── vulnerable_api.py
 │   └── screenshots/
+│       ├── 01-sensitive-data-exposed.png
+│       ├── 02-flask-server-running.png
+│       └── 03-vulnerable-api-code.png
+│
 ├── 03-api-key-protected-api/
 │   ├── README.md
 │   ├── requirements.txt
 │   ├── src/
 │   │   └── secure_api_key.py
 │   └── screenshots/
-└── 04-educational-keylogger-lab/
-    ├── README.md
-    ├── keylogger_lab.py
-    └── screenshots/
-What I Learned Building This Suite
-Through these four labs, I learned:
+│       ├── 01-api-key-access-test.png
+│       ├── 02-api-key-protected-code.png
+│       └── 03-flask-server-running.png
+│
+└── README.md
+```
 
-Low‑level networking – TCP socket connections, port scanning, and timeouts.
+## Project Summaries
 
-Web API fundamentals – Flask routes, JSON responses, and request headers.
+### 01 - Python Port Scanner
 
-Access control concepts – Why authentication matters and how even a simple API key can block unauthorised access.
+This lab uses Python's built-in `socket` module to attempt TCP connections to common ports on `127.0.0.1`. The script checks whether each port is open or closed and displays the service commonly associated with that port.
 
-Ethical considerations – How to build sensitive tools (like a keylogger) responsibly with consent prompts, kill switches, and clear disclaimers.
+This project helped reinforce how port scanning works at a basic level and why open ports matter in cybersecurity.
 
-Documentation – Writing clear, structured READMEs that explain both the what and the why for each project.
+### 02 - Vulnerable API Lab
 
-Future Improvements
-Add input validation – Allow users to specify target IPs or port ranges (with warnings).
+This lab uses Python and Flask to create a deliberately vulnerable API. The `/data` endpoint returns fake sensitive information without requiring authentication or authorization.
 
-Environment variables – Store API keys outside source code.
+This project demonstrates how sensitive data exposure and broken access control can happen when an API does not verify who is requesting protected information.
 
-Logging – Add persistent logs for API access attempts.
+### 03 - API Key Protected API Lab
 
-Encryption – Encrypt keylogger output files.
+This lab improves the vulnerable API by requiring an API key in the request header before returning fake sensitive data. If the API key is missing or incorrect, the application returns a `401 Unauthorized` response.
 
-More labs – e.g., password strength checker, file integrity monitor, basic encryption tool.
+This project demonstrates how even a basic access control check can prevent unauthenticated users from accessing protected API data.
 
-Security and Ethics Notice
-All labs are for educational purposes only.
-Every script is designed to run on 127.0.0.1 (localhost) or on the user's own machine. None of the labs transmit data over a network (unless explicitly testing a local API).
+## How to Run the Labs
 
-Port Scanner – Only scans 127.0.0.1 by default. Never scan systems you do not own.
+Each project folder contains its own README with specific setup and run instructions.
 
-Vulnerable API – Uses fake data. Do not deploy publicly.
+In general, the labs can be run by navigating into the project folder and running the Python script.
 
-API Key Protected API – Hardcoded key for learning. Real applications should use environment variables.
+Example:
 
-Keylogger – Requires typed consent "I AGREE" and stops immediately on ESC. Use only on your own computer.
+```bash
+cd 01-port-scanner
+python src/port_scanner.py
+```
 
-By using or cloning this repository, you agree to use these labs responsibly and only in controlled, authorised environments.
+For Flask-based projects, install dependencies first:
 
-License
-Educational / portfolio use only. No warranty.
+```bash
+pip install -r requirements.txt
+```
+
+Then run the application:
+
+```bash
+python src/vulnerable_api.py
+```
+
+or:
+
+```bash
+python src/secure_api_key.py
+```
+
+## Tools Used
+
+- Python
+- Flask
+- Visual Studio Code
+- PowerShell
+- `curl.exe`
+- Web browser
+- Localhost testing environment
+
+## What I Learned
+
+These projects helped me build a stronger foundation in both Python and cybersecurity. I learned how network ports are checked, how basic APIs return data, how insecure API behavior can expose sensitive information, and how access control can be added to protect an endpoint.
+
+I also practiced documenting projects in a way that explains the goal, tools used, technical process, screenshots, lessons learned, and ethical boundaries.
+
+## Future Improvements
+
+Possible future improvements for this repository include:
+
+- Adding command-line arguments to the port scanner
+- Allowing custom target IP addresses and port ranges
+- Saving scan results to a file
+- Moving hardcoded API keys into environment variables
+- Adding logging and rate limiting to the API labs
+- Creating a login-based authentication lab
+- Adding more OWASP Top 10 focused labs
+- Adding a main setup guide for the entire repository
+
+## Security and Ethics Notice
+
+These projects are for educational purposes only. They are designed to run in a local lab environment using `127.0.0.1`, also known as localhost.
+
+Do not scan, test, or attack systems that you do not own or do not have explicit permission to assess. Do not deploy intentionally vulnerable applications publicly. All sensitive-looking data used in these labs is fake and should never be replaced with real credentials, personal information, API keys, tokens, or secrets.
