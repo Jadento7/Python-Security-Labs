@@ -36,19 +36,19 @@ The listener stops when the ESC key is released, thanks to the `on_release` func
 
 ### Keylogger Source Code
 
-![Keylogger source code](keylogger-code.png)
+![Keylogger source code](01-keylogger-code.png)
 
 *The Python script showing the import statements, `format_key()` function, and the listener setup with ethical disclaimer.*
 
 ### Running the Keylogger
 
-![Running the keylogger](terminal-output.png)
+![Running the keylogger](02-terminal-output.png)
 
 *Terminal output after starting the script. The disclaimer is shown, and the script waits for ESC to stop.*
 
 ### Sample Log File Output
 
-![Sample keylog output](keylog-output.png)
+![Sample keylog output](03-keylog-output.png)
 
 *A portion of `keylog.txt` showing timestamped keystrokes, spaces as `[SPACE]`, and the ENTER key as `[ENTER]` followed by a newline.*
 
