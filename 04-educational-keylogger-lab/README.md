@@ -80,6 +80,7 @@ When the user types `hi my name is jaden` and then presses ENTER, the log file c
 00:29:57: 'e'
 00:29:57: 'n'
 00:30:00: [SPACE]
+00:30:06: [ENTER]
 ```
 
 What I Learned
@@ -94,5 +95,3 @@ Through this project, I learned how to:
 - Implement a clean, intentional kill switch (ESC) for safety
 - Add interactive user consent to enforce ethical use
 Furthermore, this lab reinforced my understanding of why ethical disclaimers, consent prompts, and strict local‑only use are critical when working with sensitive capabilities like keylogging.
-...
-00:30:06: [ENTER]
