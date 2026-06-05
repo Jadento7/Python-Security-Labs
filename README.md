@@ -66,6 +66,7 @@ python-security-labs/
 │
 ├── 04-educational-keylogger-lab/
 │   ├── README.md
+│   ├── requirements.txt
 │   ├── keylogger_lab.py
 │   └── screenshots/
 │       ├── 01-keylogger-code.png
