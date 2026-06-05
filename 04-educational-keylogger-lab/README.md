@@ -83,7 +83,7 @@ When the user types `hi my name is jaden` and then presses ENTER, the log file c
 00:30:06: [ENTER]
 ```
 
-What I Learned
+## What I Learned
 
 Through this project, I learned how to:
 
